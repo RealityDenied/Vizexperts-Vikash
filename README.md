@@ -2,7 +2,7 @@
 
 **Author:** Vikash Kumar
 
-<img width="1128" height="1000" alt="myoutput" src="https://github.com/user-attachments/assets/50faf338-f7eb-422c-9157-211b7501ad20" />
+<img width="282" height="250" alt="myoutput" src="https://github.com/user-attachments/assets/50faf338-f7eb-422c-9157-211b7501ad20" />
 
 ## About
 
