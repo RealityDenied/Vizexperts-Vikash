@@ -2,6 +2,8 @@
 
 **Author:** Vikash Kumar
 
+<img width="1128" height="1000" alt="myoutput" src="https://github.com/user-attachments/assets/50faf338-f7eb-422c-9157-211b7501ad20" />
+
 ## About
 
 This is an OpenGL C++ application that visualizes Catmull-Rom splines. The program reads control points from a text file and generates smooth curves that pass through these points. The spline is rendered with texture mapping, creating a textured path along the curve using normal vectors calculated at each point.
