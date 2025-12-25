@@ -24,6 +24,23 @@ GLuint testTexture;
 std::vector<std::vector<float>> normalPoints;
 
 
+int segmentsBetween(
+    const std::vector<float>& P1,
+    const std::vector<float>& P2,
+    float spacingg = 10.0f   
+) {
+    float dx = P2[0] - P1[0];
+    float dy = P2[1] - P1[1];
+
+    float dist = std::sqrt(dx * dx + dy * dy);
+
+    int segments = static_cast<int>(dist / spacingg);
+
+    return std::max(1, segments);
+}
+
+
+
 GLuint loadTexture(const char* path) {
     int w, h, channels;
 
@@ -260,11 +277,20 @@ void drawSpline(const std::vector<float>& P0, const std::vector<float>& P1,
         splinePoint(t, P0, P1, P2, P3, C);
         glVertex2f(static_cast<int>(C[0]), static_cast<int>(C[1]));
     }
-    for (int i = 0; i <= 10; i++) {
-        float t = i / 10.0f;
+
+    // for (int i = 0; i <= 10; i++) {
+    //     float t = i / 10.0f;
+    //     drawNormal(t, P0, P1, P2, P3, 10.0f);
+    //     //if()
+    // }
+
+    int segs = segmentsBetween(P1, P2, 40.0f);
+
+    for (int i = 0; i <= segs; i++) {
+        float t = i / (float)segs;
         drawNormal(t, P0, P1, P2, P3, 10.0f);
-        //if()
     }
+
     
 
 
